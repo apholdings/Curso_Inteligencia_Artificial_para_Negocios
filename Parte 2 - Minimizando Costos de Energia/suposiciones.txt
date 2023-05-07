@@ -1,0 +1,13 @@
+Suposicion 1:
+La temperatura del servidor puede ser aproximadaa a traves de Regresion Lineal Multiple,
+a traves de una funcion lineal de temperatura atmosferica, el numero de usuarios y
+el rango de transmision de datos
+
+temperatura del servidor = temperatura_atmosferica + 1.25 * numero_usuarios + 1.25 * rango_transmision_datos
+
+Suposicion 2:
+La energia que gasta un sistema (el sistema de enfriamiento de la IA) que cambia la temperatura del servidor, de Tt a Tt+1, dentro de 1 unidad de tiempo (aqui 1 minuto), puede ser aproximado denuevo con regresion por una funcion lineal del cambio absoluto en la temperatura:
+
+Et = Cambio(Tt) = |Tt + 1 - Tt| = DOS OPCIONES{1: Tt+1 - Tt Si Tt+1 > Tt, eso si el servidor esta recalentado
+
+2: Tt - Tt+1 si Tt+1 < Tt, si el servidor esta frio}
